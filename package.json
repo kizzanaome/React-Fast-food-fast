@@ -1,0 +1,40 @@
+{
+  "name": "React-Fast-food-fast",
+  "version": "1.0.0",
+  "description": "React version of fast-food-fast",
+  "main": "index.js",
+  "repository": "https://github.com/kizzanaome/React-Fast-food-fast.git",
+  "author": "<naomekizzan@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "yarn clean; webpack --config config/webpack-prod-config.js",
+    "clean": "rm -rf build/*",
+    "start:dev": "node config/webpack-dev-server.js",
+    "start:prod": "yarn build; serve build"
+  },
+  "private": false,
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "path": "^0.12.7",
+    "react-hot-loader": "^4.6.5",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "^4.29.0",
+    "webpack-command": "^0.4.2",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
