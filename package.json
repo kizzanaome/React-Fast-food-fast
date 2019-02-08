@@ -15,11 +15,12 @@
   "license": "ISC",
   "dependencies": {
     "babel-jest": "^24.1.0",
-    "file-loader": "^3.0.1",
     "jest": "^24.1.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "react-hot-loader": "^4.6.5"
+    "react-hot-loader": "^4.6.5",
+    "react-router-dom": "^4.3.1",
+    "validator": "^10.11.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -31,6 +32,7 @@
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "enzyme-to-json": "^3.3.5",
+    "file-loader": "^3.0.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",
