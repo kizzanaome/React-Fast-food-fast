@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: ['babel-polyfill', './src/index.js'],
   mode: 'development',
   module: {
     rules: [
@@ -45,7 +45,8 @@ module.exports = {
     contentBase: path.join(__dirname, 'public/'),
     port: 3000,
     publicPath: 'http://localhost:3000/dist/',
-    hotOnly: true
+    hotOnly: true,
+    historyApiFallback: true
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]
 };
