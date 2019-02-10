@@ -14,9 +14,4 @@ export class FoodMenuView extends Component {
 
 const mapStateToProps = state => ({});
 
-const mapDispatchToProps = {};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(FoodMenuView);
+export default connect(mapStateToProps)(FoodMenuView);
