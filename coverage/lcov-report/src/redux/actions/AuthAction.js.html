@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">40% </span>
+        <span class="strong">52% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/25</span>
+        <span class='fraction'>13/25</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,21 +30,21 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">14.29% </span>
+        <span class="strong">28.57% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/14</span>
+        <span class='fraction'>4/14</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">42.11% </span>
+        <span class="strong">57.89% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>8/19</span>
+        <span class='fraction'>11/19</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -139,7 +139,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -151,10 +152,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -177,12 +177,12 @@ axiosInstance.interceptors.response.use(
 <span class="fstat-no" title="function not covered" >  er</span>ror =&gt; <span class="cstat-no" title="statement not covered" >Promise.reject(error.response.data)</span>
 );
 &nbsp;
-export const registerAction = payload =&gt; ({
+export const registerAction = <span class="fstat-no" title="function not covered" >pa</span>yload =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
   type: REGISTER_USER,
   payload
 });
 &nbsp;
-export const AutherrorAction = payload =&gt; ({
+export const AutherrorAction = <span class="fstat-no" title="function not covered" >pa</span>yload =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
   type: AUTH_ERROR,
   payload
 });
@@ -197,8 +197,9 @@ export const LoginErrorAction = <span class="fstat-no" title="function not cover
   payload
 });
 &nbsp;
-export const registerUser = <span class="fstat-no" title="function not covered" >si</span>gnUp =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync dispatch =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  return await axiosInstance</span>
+export const registerUser = signUp =&gt; async dispatch =&gt; {
+  console.log(signUp);
+  return await axiosInstance
     .post('/auth/signup', signUp)
     .then(<span class="fstat-no" title="function not covered" >re</span>sponse =&gt; {
 <span class="cstat-no" title="statement not covered" >      dispatch(registerAction(response.message));</span>
@@ -209,11 +210,10 @@ export const registerUser = <span class="fstat-no" title="function not covered" 
     });
 };
 &nbsp;
-export const handleLogin = <span class="fstat-no" title="function not covered" >lo</span>ginData =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync dispatch =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  return await axiosInstance</span>
+export const handleLogin = loginData =&gt; async dispatch =&gt; {
+  return await axiosInstance
     .post('/auth/login', loginData)
     .then(<span class="fstat-no" title="function not covered" >re</span>sponse =&gt; {
-<span class="cstat-no" title="statement not covered" >      console.log(response.data.message);</span>
 <span class="cstat-no" title="statement not covered" >      localStorage.setItem('token', response.data.token);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >      localStorage.setItem('username', loginData.username);</span>
@@ -229,7 +229,7 @@ export const handleLogin = <span class="fstat-no" title="function not covered" >
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Feb 11 2019 06:20:44 GMT+0300 (East Africa Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Feb 11 2019 17:27:31 GMT+0300 (East Africa Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

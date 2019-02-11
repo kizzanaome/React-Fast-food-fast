@@ -6,7 +6,8 @@
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
     "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -19,13 +20,15 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.1.0",
     "bootstrap": "^4.2.1",
+    "express": "^4.16.4",
     "jest": "^24.1.0",
+    "moxios": "^0.4.0",
     "prop-types": "^15.6.2",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-hot-loader": "^4.6.5",
     "react-redux": "^6.0.0",
-    "react-router": "^3.2.1",
+    "react-router": "^4.0.0",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",

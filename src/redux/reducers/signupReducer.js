@@ -10,7 +10,8 @@ export const authReducer = (state = initialState, action) => {
     case REGISTER_USER:
       return {
         ...state,
-        message: action.payload
+        message: action.payload,
+        error: ''
       };
     case AUTH_ERROR:
       return { ...state, error: action.payload };

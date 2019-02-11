@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import './static/css/foodmenu.css';
-import './static/css/viewmore.css';
-import './static/css/order.css';
 
 import Header from './header';
 import img from '../componets/static/images/second_image.jpg';
