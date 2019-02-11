@@ -3,6 +3,7 @@ import SignupComponet from '../componets/signupComponet';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { registerUser } from '../redux/actions/AuthAction';
+import { MemoryRouter } from 'react-router-dom';
 
 export class SignupView extends Component {
   state = {
@@ -14,8 +15,12 @@ export class SignupView extends Component {
     passwordError: '',
     message: ''
   };
+
   onChange = evt => {
-    this.setState({ [evt.target.name]: evt.target.value });
+    this.setState({
+      ...this.state,
+      [evt.target.name]: evt.target.value
+    });
   };
 
   onClick = async evt => {
@@ -24,11 +29,11 @@ export class SignupView extends Component {
       username: this.state.username,
       password: this.state.password
     };
+
     await this.props.registerUser(userData);
     if (this.props.fail) {
-      console.log('login failure');
     } else {
-      this.props.history.push('/login');
+      this.props.history.push('/');
     }
   };
 

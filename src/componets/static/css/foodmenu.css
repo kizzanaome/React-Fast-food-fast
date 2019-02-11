@@ -72,11 +72,11 @@ ul {
   padding: 0;
   list-style: none;
 }
-ul li {
+/* ul li {
   text-align: center;
   background: #000;
   margin: 40px;
-}
+} */
 .side-menu ul li a {
 }
 ul li ul li {

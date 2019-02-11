@@ -32,6 +32,7 @@ export const LoginErrorAction = payload => ({
 });
 
 export const registerUser = signUp => async dispatch => {
+  console.log(signUp);
   return await axiosInstance
     .post('/auth/signup', signUp)
     .then(response => {
@@ -47,7 +48,6 @@ export const handleLogin = loginData => async dispatch => {
   return await axiosInstance
     .post('/auth/login', loginData)
     .then(response => {
-      console.log(response.data.message);
       localStorage.setItem('token', response.data.token);
 
       localStorage.setItem('username', loginData.username);

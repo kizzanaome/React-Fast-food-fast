@@ -25,7 +25,7 @@ export class loginView extends Component {
     };
     await this.props.handleLogin(userData);
     if (this.props.message) {
-      this.props.history.push('/');
+      this.props.history.push('/home');
     }
   };
   render() {

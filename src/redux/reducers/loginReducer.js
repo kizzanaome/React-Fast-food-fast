@@ -8,7 +8,7 @@ const initialState = {
 export const loginReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOGIN:
-      return { ...state, loginMessage: action.payload };
+      return { ...state, loginMessage: action.payload, loginError: '' };
     case LOGIN_ERROR:
       return { ...state, loginError: action.payload };
 
