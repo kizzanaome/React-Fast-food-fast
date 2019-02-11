@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './static/css/signup.css';
 import PropTypes from 'prop-types';
 
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
 export class SignupComponet extends Component {
   render() {
     const { onChange, onClick, message, error } = this.props;

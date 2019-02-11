@@ -14,10 +14,10 @@ export class FoodMenuComponet extends Component {
     return (
       <div>
         <Header />
-        <div class="wrapper">
-          <div class="content">
+        <div className="wrapper">
+          <div className="content">
             {/* <!--menu--> */}
-            <div class="side-menu">
+            <div className="side-menu">
               <ul>
                 <li>
                   <a href="">Categories</a>
@@ -36,14 +36,14 @@ export class FoodMenuComponet extends Component {
               </ul>
             </div>
             {/* <!--Foods--> */}
-            <div class="content-wrapper">
-              <div class="foods">
+            <div className="content-wrapper">
+              <div className="foods">
                 {/* <!--food card--> */}
-                <div class="food-cards">
-                  <div class="img">
+                <div className="food-cards">
+                  <div className="img">
                     <img src={imgb} alt="food" />
                   </div>
-                  <div class="desc">
+                  <div className="desc">
                     <h3>
                       Food: <span>Pizza</span>
                     </h3>
