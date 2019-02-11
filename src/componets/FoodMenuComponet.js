@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import './static/css/foodmenu.css';
-
 import Header from './header';
-import img from '../componets/static/images/second_image.jpg';
 import imgb from '../componets/static/images/menu1.jpg';
 
 export class FoodMenuComponet extends Component {

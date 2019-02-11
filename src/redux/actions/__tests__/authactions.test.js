@@ -3,7 +3,7 @@ import MockAdapter from 'axios-mock-adapter';
 import thunk from 'redux-thunk';
 import 'babel-polyfill';
 import { registerUser, handleLogin, axiosInstance } from '../AuthAction';
-import { REGISTER_USER, AUTH_ERROR, LOGIN, LOGIN_ERROR } from '../types';
+import { REGISTER_USER, LOGIN, LOGIN_ERROR } from '../types';
 
 describe('test registration actions', () => {
   let store;
@@ -11,7 +11,6 @@ describe('test registration actions', () => {
   let httpMock;
   let requestUrl;
 
-  const requestData = { username: 'testuser', password: 'password' };
   let requestData2;
 
   beforeEach(() => {

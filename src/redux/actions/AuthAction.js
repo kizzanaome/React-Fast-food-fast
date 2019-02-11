@@ -32,7 +32,6 @@ export const LoginErrorAction = payload => ({
 });
 
 export const registerUser = signUp => async dispatch => {
-  console.log(signUp);
   return await axiosInstance
     .post('/auth/signup', signUp)
     .then(response => {

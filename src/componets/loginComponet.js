@@ -17,7 +17,6 @@ export class LoginComponet extends Component {
                 type="text"
                 name="username"
                 id="username"
-                // value={this.state.username}
                 onChange={onChange}
                 required={true}
               />
@@ -28,7 +27,6 @@ export class LoginComponet extends Component {
                 type="password"
                 name="password"
                 id="password"
-                // value={this.state.password}
                 onChange={onChange}
                 minLength="8"
                 required
@@ -37,6 +35,7 @@ export class LoginComponet extends Component {
               <button
                 className="btn"
                 name="submit"
+                id="login-Button"
                 type="button"
                 onClick={onClick}
               >
