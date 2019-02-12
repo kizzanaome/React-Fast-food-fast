@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 import Header from './header';
 import '../componets/static/css/home.css';
 import img from '../componets/static/images/Rolexl.jpg';

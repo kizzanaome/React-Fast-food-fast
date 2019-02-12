@@ -3,7 +3,8 @@ import SignupComponet from '../componets/signupComponet';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { registerUser } from '../redux/actions/AuthAction';
-import { MemoryRouter } from 'react-router-dom';
+import notify from 'msg-notify';
+import 'msg-notify/dist/notify.css';
 
 export class SignupView extends Component {
   state = {
@@ -33,7 +34,8 @@ export class SignupView extends Component {
     await this.props.registerUser(userData);
     if (this.props.fail) {
     } else {
-      this.props.history.push('/');
+      notify('You have succsesfully signed up please login in');
+      this.props.history.push('/login');
     }
   };
 

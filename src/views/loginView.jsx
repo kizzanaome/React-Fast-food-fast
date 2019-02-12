@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import LoginComponent from '../componets/loginComponet';
 import { connect } from 'react-redux';
 import { handleLogin } from '../redux/actions/AuthAction';
+import notify from 'msg-notify';
+import 'msg-notify/dist/notify.css';
 
 export class loginView extends Component {
   state = {
@@ -25,6 +27,8 @@ export class loginView extends Component {
     };
     await this.props.handleLogin(userData);
     if (this.props.message) {
+      const success = this.props.message;
+      notify(success, 'success');
       this.props.history.push('/home');
     }
   };

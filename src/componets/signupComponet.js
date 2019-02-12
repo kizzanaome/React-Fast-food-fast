@@ -10,7 +10,7 @@ export class SignupComponet extends Component {
     return (
       <div className="wrapper">
         <div className="frm">
-          <form role="form" onSubmit={onClick}>
+          <form role="form" id="signup-form" onSubmit={onClick}>
             {error && <div className="alert alert-danger">{error}</div>}
             <div>{message}</div>
             <h2>Please Signup</h2>
@@ -22,7 +22,6 @@ export class SignupComponet extends Component {
               onChange={onChange}
               required={true}
             />
-            {/* {errors.username && <p>{errors.username}</p>} */}
 
             <br />
             <label htmlFor="password">Password</label>
@@ -30,7 +29,6 @@ export class SignupComponet extends Component {
               type="password"
               name="password"
               id="password"
-              // value={this.state.password}
               onChange={onChange}
               minLength="4"
               required={true}
